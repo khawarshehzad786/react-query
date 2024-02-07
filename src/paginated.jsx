@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 function Products() {
 
     const [searchParams, setSearchParams]=useSearchParams({skip:0,limit:4});
-
+ 
     const skip = parseInt(searchParams.get('skip')|| 0);
     const limit = parseInt(searchParams.get('limit')|| 0);
 
