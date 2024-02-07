@@ -7,7 +7,7 @@ function Products() {
     const [searchParams, setSearchParams]=useSearchParams({skip:0,limit:4});
  
     const skip = parseInt(searchParams.get('skip')|| 0);
-    const limit = parseInt(searchParams.get('limit')|| 0);
+    const limit = parseInt(searchParams.get('limit')|| 0); 
 
     const { data: categories } = useQuery({
         queryKey: ['categories'],
