@@ -1,5 +1,5 @@
 import { useQuery,keepPreviousData } from '@tanstack/react-query';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 function Products() {
@@ -29,9 +29,15 @@ function Products() {
 
 
     const handleMove = (moveCount)=>{
-        setSkit((prevSkip)=>{
-        return Math.max(prevSkip + moveCount, 0);
+        setSearchParams((prev)=>{
+            prev.set('skip',Math.max(skip + moveCount, 0));
+            return prev;
         })
+
+
+        // setSkit((prevSkip)=>{
+        // return Math.max(prevSkip + moveCount, 0);
+        // })
     }
     return (
         <>
